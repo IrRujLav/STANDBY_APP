@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  # before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   # def index
   #   @bookings = Booking.all
@@ -9,7 +9,8 @@ class BookingsController < ApplicationController
   # end
 
   # def new
-  #   @booking = Booking.new
+  #   @event = Event.find(params[:event_id])
+  #   @booking = Booking.new(event: @event, user: current_user)
   # end
 
   # def create
