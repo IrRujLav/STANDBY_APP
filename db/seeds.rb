@@ -15,9 +15,9 @@ User.create(email: 'jane.smith@example.com', encrypted_password: 'password456', 
 User.create(email: 'mark.johnson@example.com', encrypted_password: 'password789', username: 'markjohnson')
 
 # Venues
-Venue.create(name: 'The Laugh Factory', location: '789 Comedy Street, Cityville', type: 'Bar/Café', user_id: User.first.id)
-Venue.create(name: 'City Theater', location: '456 Broadway Avenue, Townsville', type: 'Theater', user_id: User.first.id)
-Venue.create(name: 'Riverside Park', location: '123 Riverfront Road, Metropolis', type: 'Open air', user_id: User.second.id)
+Venue.create(name: 'The Laugh Factory', location: '789 Comedy Street, Cityville', category: 'Bar/Café', user_id: User.first.id)
+Venue.create(name: 'City Theater', location: '456 Broadway Avenue, Townsville', category: 'Theater', user_id: User.first.id)
+Venue.create(name: 'Riverside Park', location: '123 Riverfront Road, Metropolis', category: 'Open air', user_id: User.second.id)
 
 # Events
 Event.create(name: 'Stand-up Comedy Night', description: 'Laugh out loud with top comedians.', category: 'Stand up comedy', price: 20, date: Date.today + 30, venue_id: Venue.first.id)
