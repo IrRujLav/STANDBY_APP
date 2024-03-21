@@ -19,14 +19,11 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-
-    <%# <%= f.input :check_box,
+    <%= f.input :owner,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "owner" }%>
   </div>
-<%# add a button for sing out
-add the checkbox %>
   <div class="form-actions">
     <%= f.button :submit, "Sign up" %>
   </div>

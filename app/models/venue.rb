@@ -1,3 +1,4 @@
 class Venue < ApplicationRecord
-  validates :location, :name, :type, presence: true
+  validates :location, :name, :category, presence: true
+  validates :category, inclusion: {in: ["Bar/Café", "Theater", "Open air", "Other"]}
 end
