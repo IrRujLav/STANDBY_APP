@@ -1,3 +1,4 @@
 class Venue < ApplicationRecord
-  validates :location, :name, :type, presence: truerails
+  validates :location, :name, :category, presence: true
+  validates :category, inclusion: {in: ["Bar/Café", "Theater", "Open air", "Other"]}
 end
