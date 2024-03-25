@@ -9,18 +9,15 @@
     </div>
 
 
-    <div class="event-time-date d-flex align-items-center mt-5">
-
-      <div>
+    <div class="event-time-date d-flex align-items-center mt-2 p-3 bg-body-secondary justify-content-between">
+      <div class="fw-bold">
         <p> <%= @event.date %> </p>
         <p>@ 20:30</p>
       </div>
 
-      <p>Venue</p>
+      <p> <%= @venue.name %> </p>
 
     </div>
-
-
 
     <p class="mt-5">Event description</p>
     <p> <%= @event.description %> </p>
@@ -30,11 +27,12 @@
 
   </div>
 
-
-</div>
-
+<%# <%= link_to "Edit", edit_event_path, class: "btn btn-warning" %>
 
 <%= link_to "Delete",
   event_path(@event),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+  class: "btn btn-secondary"
 %>
+
+</div>
