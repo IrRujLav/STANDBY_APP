@@ -6,20 +6,42 @@
 <div class="banner">
   <div class="container">
     <h1> <strong>StandByApp</strong></h1>
-    <h2>The app where your money turns into money</h2>
+    <h2>The app where your time turns into money</h2>
     <h3>Don't miss the next upcoming events</h3>
     <%# <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
 </div>
 
-<div class="events-container">
-  <div class= "event-card">
-    <% @events.each do |event|%>
-      <%= event.image %>
-      <%= event.name %>
-      <%= event.description%>
-      <%= event.date%>
-    <% end %>
-  </div>
+<div class="events">
+ <% @events.each do |event|%>
+    <%= render "event_vertical_card", event: event %>
+ <% end %>
+
 </div>
+
 <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-dark" %>
+
+
+<div id="carouselEventsHome" class="carousel slide">
+  <div class="carousel-inner">
+    <% @events.each_with_index do |event, index|%>
+      <div class="carousel-item <%= index == 0 ? "active" : "" %>">
+        <img src="<%=event.image%>" class="d-block w-100" alt="<%=event.image%> picture">
+        <div class="carousel-caption d-md-block">
+          <h5><%=event.name %></h5>
+          <p><%= event.description %></p>
+          <p><%= event.date %></p>
+          <p><%= event.price %></p>
+        </div>
+      </div>
+    <% end %>
+ </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselEventsHome" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselEventsHome" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
