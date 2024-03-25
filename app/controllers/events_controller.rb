@@ -1,32 +1,34 @@
 class EventsController < ApplicationController
-def index
-@events = Event.all
-end
+  skip_before_action :authenticate_user!, only: [:home, :index]
 
-def home
-@events = Event.where(date: Date.today)
-end
-# def show
-# @event = Event.find(params[:id])
+  def index
+    @events = Event.all
+  end
 
-# end
+  def home
+    @events = Event.where(date: Date.today..(Date.today + 7))
+  end
+  # def show
+  # @event = Event.find(params[:id])
 
-# def new
-# @event = Event.new
-# end
+  # end
 
-# def create
-# @event = Event.new(event_params)
-# if @event.save
-# redirect_to event_path(@event)
-# else
-# render :new, status: :unprocessable_entity
-# end
-# end
+  # def new
+  # @event = Event.new
+  # end
 
-# def edit
-# @event = Event.find(params[:id])
-# end
+  # def create
+  # @event = Event.new(event_params)
+  # if @event.save
+  # redirect_to event_path(@event)
+  # else
+  # render :new, status: :unprocessable_entity
+  # end
+  # end
+
+  # def edit
+  # @event = Event.find(params[:id])
+  # end
 
 # def update
 # @event = Event.find(params[:id])

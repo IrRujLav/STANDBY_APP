@@ -1,8 +1,25 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-dark" %>
 
-<% @events.each do |event|%>
-<%= event.name %>
-<%= event.description%>
-<% end %>
+
+
+
+<%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);"> %>
+<div class="banner">
+  <div class="container">
+    <h1> <strong>StandByApp</strong></h1>
+    <h2>The app where your money turns into money</h2>
+    <h3>Don't miss the next upcoming events</h3>
+    <%# <a class="btn btn-flat" href="#">Apply now</a> %>
+  </div>
+</div>
+
+<div class="events-container">
+  <div class= "event-card">
+    <% @events.each do |event|%>
+      <%= event.image %>
+      <%= event.name %>
+      <%= event.description%>
+      <%= event.date%>
+    <% end %>
+  </div>
+</div>
+<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-dark" %>
