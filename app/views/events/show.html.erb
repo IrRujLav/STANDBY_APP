@@ -1,0 +1,40 @@
+<div class="container">
+<%= link_to "<- Back", root_path, class: "d-flex justify-content-start btn btn-secondary" %>
+  <div class="event-info ">
+
+
+    <div class="event-head text-center">
+      <h1 class="fw-bold"> <%= @event.name %> </h1>
+      <a class="btn btn-dark fs-4 rounded-pill" href="">Buy for $<%= @event.price %></a>
+    </div>
+
+
+    <div class="event-time-date d-flex align-items-center mt-5">
+
+      <div>
+        <p> <%= @event.date %> </p>
+        <p>@ 20:30</p>
+      </div>
+
+      <p>Venue</p>
+
+    </div>
+
+
+
+    <p class="mt-5">Event description</p>
+    <p> <%= @event.description %> </p>
+    <p> <%= @event.category %> </p>
+
+
+
+  </div>
+
+
+</div>
+
+
+<%= link_to "Delete",
+  event_path(@event),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>

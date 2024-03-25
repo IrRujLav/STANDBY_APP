@@ -1,15 +1,16 @@
 class EventsController < ApplicationController
-def index
-@events = Event.all
-end
+  def index
+    @events = Event.all
+  end
 
-def home
-@events = Event.where(date: Date.today)
-end
-# def show
-# @event = Event.find(params[:id])
+  def home
+    @events = Event.where(date: Date.today)
+  end
 
-# end
+  def show
+    @event = Event.find(params[:id])
+  end
+
 
 # def new
 # @event = Event.new
