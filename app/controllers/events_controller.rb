@@ -3,6 +3,9 @@ def index
 @events = Event.all
 end
 
+def home
+@events = Event.where(date: Date.today)
+end
 # def show
 # @event = Event.find(params[:id])
 
