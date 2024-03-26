@@ -13,6 +13,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @venue = Venue.find(params[:id])
     @event_image = @event.image
+
   end
 
   def edit
