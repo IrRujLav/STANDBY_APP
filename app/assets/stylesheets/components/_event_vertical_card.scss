@@ -1,7 +1,34 @@
 .events{
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap:nowrap;
   overflow-x: auto;
-  margin: 20px;
 }
 
+.event-card {
+  display: flex;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 200px;
+  align-items: end;
+  background-size: cover;
+  background-position: center;
+  margin-right: 16px;
+
+}
+
+
+.event-card-info{
+  max-height: 100px;
+  width: 80vw;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}
+
+.event-card-info button {
+  height: 50px;
+  font-stretch: condensed;
+}
