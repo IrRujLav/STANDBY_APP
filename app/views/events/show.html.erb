@@ -1,36 +1,67 @@
-<div class="container">
-<%= link_to "<- Back", root_path, class: "d-flex justify-content-start btn btn-secondary" %>
-  <div class="event-info ">
+<div class="container p-0">
 
+  <div class="d-flex justify-content-between align-items-center p-2">
+    <span>
+      <%= link_to "<– Back", events_path, class: "justify-content-start btn btn-dark rounded-pill" %>
+    </span>
 
-    <div class="event-head text-center">
-      <h1 class="fw-bold"> <%= @event.name %> </h1>
-      <a class="btn btn-dark fs-4 rounded-pill" href="">Buy for $<%= @event.price %></a>
-    </div>
-
-
-    <div class="event-time-date d-flex align-items-center mt-2 p-3 bg-body-secondary justify-content-between">
-      <div class="fw-bold">
-        <p> <%= @event.date %> </p>
-        <p>@ 20:30</p>
-      </div>
-
-      <p> <%= @venue.name %> </p>
-
-    </div>
-
-    <p class="mt-5">Event description</p>
-    <p> <%= @event.description %> </p>
-    <p> <%= @event.category %> </p>
+    <span>
+      <i class="fa-solid fa-bars fs-3"></i>
+    </span>
 
   </div>
 
-<%# <%= link_to "Edit", edit_event_path, class: "btn btn-warning" %>
 
-<%= link_to "Delete",
-  event_path(@event),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-  class: "btn btn-secondary"
-%>
+
+  <div class="event-info ">
+
+    <div class="event-head text-center">
+      <div class="banner d-flex justify-content-center align-items-center"
+        style="
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        background-image: linear-gradient(rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)),
+        url(<%= @event.image %>)">
+
+        <div class="banner-txt">
+          <h1 class="fw-bold text-white mb-3"> <%= @event.name %> </h1>
+          <a class="btn btn-dark fs-4 rounded-pill border border-light-subtle" href="">Buy for $<%= @event.price %></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-time-date d-flex align-items-center mt-4 p-3 bg-body-secondary justify-content-between">
+      <div class="fw-bold">
+        <p class="mb-0"> <%= @event.date %> </p>
+        <p class="mb-0">@ 20:30</p>
+      </div>
+
+      <p class="mb-0"> <%= link_to @event.venue.name, events_path, class: "text-dark" %> </p>
+
+    </div>
+
+    <div class="event-txt px-4">
+      <h5 class="mt-5 fw-bold">Event description</h5>
+      <p> <%= @event.description %> </p>
+      <h5 class="mt-4 fw-bold">Category</h5>
+      <p> <%= @event.category %> </p>
+      <h5 class="mt-4 fw-bold">About the Organization</h5>
+      <p> <%= @event.venue.name %> is a place for open-minded, friendly and ready to have fun personalities. The event will take place here : <%= @event.venue.location %> </p>
+    </div>
+
+    <div class="venue-links d-flex justify-content-center mt-4">
+      <%= link_to "Edit", edit_event_path, class: "btn btn-warning rounded-0" %>
+
+      <%= link_to "Delete",
+        event_path(@event),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+        class: "btn btn-secondary rounded-0"
+      %>
+    </div>
+
+  </div>
+
 
 </div>

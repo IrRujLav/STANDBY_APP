@@ -12,6 +12,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @venue = @event.venue
+    @event_image = @event.image
   end
 
   def new
@@ -36,13 +37,13 @@ end
   def update
   @event = Event.find(params[:id])
   @event.update(event_params)
-  redirect_to events_path(@event)
+  redirect_to event_path(@event)
   end
 
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to event_path, status: :see_other
+    redirect_to events_path
   end
 
 private
