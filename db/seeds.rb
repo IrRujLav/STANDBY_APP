@@ -6,15 +6,35 @@ User.destroy_all
 puts "All the database destroyed"
 
 # Users
-User.create!(email: 'john.doe@example.com', password: 'password123', username: 'johndoe', owner: true)
-User.create!(email: 'jane.smith@example.com', password: 'password456', username: 'janesmith')
-User.create!(email: 'mark.johnson@example.com', password: 'password789', username: 'markjohnson')
+john = User.create!(email: 'john.doe@example.com', password: 'password123', username: 'johndoe', owner: true)
+jiregna = User.create!(email: 'jiregna@example.com', password: '123456', username: 'jiregna', owner: true)
+jane = User.create!(email: 'jane.smith@example.com', password: 'password456', username: 'janesmith')
+mark = User.create!(email: 'mark.johnson@example.com', password: 'password789', username: 'markjohnson')
 
 # Venues
-Venue.create!(name: 'The Laugh Factory', location: '789 Comedy Street, Cityville', category: 'Bar/Café', user_id: User.first.id)
-Venue.create!(name: 'City Theater', location: '456 Broadway Avenue, Townsville', category: 'Theater', user_id: User.first.id)
-Venue.create!(name: 'Riverside Park', location: '123 Riverfront Road, Metropolis', category: 'Open air', user_id: User.second.id)
-Venue.create!(name: 'Riverside Park', location: '123 Riverfront Road, Metropolis', category: 'Open air', user_id: User.second.id)
+Venue.create!(
+  name: "Cozy Cafe",
+  location: "123 Main Street, Cityville",
+  category: "Bar/Café",
+  user_id: jiregna.id,
+  image: "https://images.unsplash.com/photo-1521334726092-b509a19597c6?q=80&w=3001&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+)
+
+Venue.create!(
+  name: "City Park Amphitheater",
+  location: "City Park, Downtown",
+  category: "Theater",
+  user_id: john.id,
+  image: "https://images.unsplash.com/photo-1521727284875-14f6b020d1d6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+)
+
+Venue.create!(
+  name: "Retro Bowling Alley",
+  location: "456 Elm Street, Urbantown",
+  category: "Open air",
+  user_id: jiregna.id,
+  image: "https://images.unsplash.com/photo-1618901882475-4a8ce888ffda?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+)
 
 
 # Events
@@ -46,7 +66,7 @@ Event.create!(
   category: 'Improv',
   price: 15,
   date: Date.today + 10,
-  time: Time.parse('21:00'), # Adding a specific time (e.g., 9:00 PM)
+  time: Time.parse('20:00'), # Adding a specific time (e.g., 9:00 PM)
   venue_id: Venue.third.id,
   image: "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
@@ -58,7 +78,7 @@ Event.create!(
   price: 15,
   date: Date.today,
   time: Time.parse('22:00'), # Adding a specific time (e.g., 10:00 PM)
-  venue_id: Venue.fourth.id,
+  venue_id: Venue.third.id,
   image: "https://images.unsplash.com/photo-1588928781379-c355ab3edc9b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
