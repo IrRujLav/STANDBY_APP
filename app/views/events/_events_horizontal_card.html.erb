@@ -1,0 +1,19 @@
+    <div class="card mb-3 card-horizontal">
+        <div class="row">
+          <div class="col-sm-4 d-flex justify-content-center align-items-center pv-4 px-0">
+            <img src="<%= event.image %>" class="img-fluid rounded-start" alt="Event image">
+          </div>
+          <div class="col-sm-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= event.name %></h5>
+              <p class="card-text"><%= event.venue.location %></p>
+              <p class="card-text italic-text"><%= event.description %></p>
+              <p class="card-text">
+                <small class="text-muted">
+                 <i class="fa fa-calendar"></i> <%= event.date %> | <i class="fa-solid fa-euro-sign"></i> <%= event.price %> | <%= link_to '<i class="fa fa-eye""></i> Show'.html_safe, event_path(event), class: 'btn btn-info shadow smaller-button' %>
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
