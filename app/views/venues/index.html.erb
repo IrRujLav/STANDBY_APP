@@ -1,0 +1,10 @@
+<div class="container">
+<ul>
+  <% @venues.each do |venue| %>
+    <img src=" <%= venue.image %>" alt="Venue image" style ="height:300px" >
+    <li><%= venue.name %></li>
+    <li><%= venue.location %></li>
+    <li><%= venue.category %></li>
+  <% end %>
+</ul>
+</div>
