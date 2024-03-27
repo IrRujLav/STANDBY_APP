@@ -48,6 +48,6 @@ end
   private
 
   def event_params
-    params.require(:event).permit(:name, :image, :description, :date, :price, :venue_id, :category)
+    params.require(:event).permit(:name, :image, :description, :date, :time, :price, :venue_id, :category)
   end
 end
