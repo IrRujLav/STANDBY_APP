@@ -1,0 +1,17 @@
+<ul class="navbar-links fs-1 p-2 m-0 d-flex gap-5 list-unstyled">
+
+  <%# Events %>
+  <li>
+  <%= link_to events_path, class: 'nav-btn text-black' do %><i class="fa-solid fa-calendar-days"></i><% end %>
+  </li>
+
+  <%# Home %>
+  <li>
+  <%= link_to root_path, class: 'nav-btn text-black' do %><i class="fa-solid fa-house"></i><% end %>
+  </li>
+
+  <%# Bookings %>
+  <li>
+  <%= link_to events_path, class: 'nav-btn text-black' do %><i class="fa-regular fa-bookmark"></i><% end %>
+  </li>
+</ul>

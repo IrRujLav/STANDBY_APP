@@ -1,11 +1,13 @@
-/*stlying _card.html.erb*/
+/*stlying _events_horizontal_card.html.erb*/
 
 .card-horizontal {
   display: flex;
 }
 
-.card-img-horizontal {
+.img-fluid {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .card {
@@ -18,9 +20,16 @@
       font-family: Arial, sans-serif;
     }
 }
+
 /*font style */
 
 
 .italic-text {
   font-style: italic;
+}
+
+/*styling buttons*/
+
+.smaller-button {
+  padding: 4px 12px !important;
 }

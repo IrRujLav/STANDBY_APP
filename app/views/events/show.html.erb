@@ -5,9 +5,7 @@
       <%= link_to "<– Back", events_path, class: "justify-content-start btn btn-dark rounded-pill" %>
     </span>
 
-    <span>
-      <i class="fa-solid fa-bars fs-3"></i>
-    </span>
+
 
   </div>
 
@@ -34,8 +32,8 @@
 
     <div class="event-time-date d-flex align-items-center mt-4 p-3 bg-body-secondary justify-content-between">
       <div class="fw-bold">
-        <p class="mb-0"> <%= @event.date %> </p>
-        <p class="mb-0">@ 20:30</p>
+        <p class="mb-0"> <%= @event.date.strftime("%A, %d %B %Y") %> </p>
+        <p class="mb-0">@ <%= @event.time.strftime("%I:%M %p") %> </p>
       </div>
 
       <p class="mb-0"> <%= link_to @event.venue.name, events_path, class: "text-dark" %> </p>
