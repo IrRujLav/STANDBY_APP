@@ -2,13 +2,25 @@
 
 
 
-<%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);"> %>
-<div class="banner">
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
   <div class="container">
     <h1> <strong>StandByApp</strong></h1>
     <h2>The app where your time turns into money</h2>
-    <h3>Don't miss the next upcoming events</h3>
+    <h3>Buy StandBy tickets for your favourite events. Get a massive descount. Come to the venue. If you don't get a slot, get your money back </h3>
     <%# <a class="btn btn-flat" href="#">Apply now</a> %>
+  </div>
+
+  <div class="category-bottons">
+    <%= link_to "Stand Up", events_path(category:"Stand up comedy"), class: "btn btn-secondary" %>
+    <%= link_to "Improv", events_path(category:"Improv"), class: "justify-content-start btn btn-secondary" %>
+    <%= link_to "Open Mic", events_path(category:"Open Mic"), class: "justify-content-start btn btn-secondary" %>
+    <%= link_to "Live Music", events_path(category:"Live Music"), class: "justify-content-start btn btn-secondary" %>
+    <%= link_to "Theater", events_path(category:"Theater"), class: "justify-content-start btn btn-secondary" %>
+
+    <%# <a class="btn btn-flat" href="#">Apply now</a>
+    <a class="btn btn-flat" href="#">Apply now</a>
+    <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
 </div>
 
@@ -16,10 +28,22 @@
  <% @events.each do |event|%>
     <%= render "event_vertical_card", event: event %>
  <% end %>
-
 </div>
 
-<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-dark" %>
+<div class="container" style="margin-top: 20px;">
+  <div class="row ">
+    <div class="col-sm-12">
+      <h1 style="text-align: center;">Events</h1>
+    </div>
+
+
+    <% @events.each do |event| %>
+      <%= render 'card', event: event %>
+    <% end %>
+  </div>
+</div>
 
 
 
+
+<%# <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-dark" %>

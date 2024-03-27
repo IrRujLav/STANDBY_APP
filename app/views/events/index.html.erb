@@ -3,8 +3,12 @@
     <div class="col-sm-12">
       <h1 style="text-align: center;">Events</h1>
     </div>
-    <% @events.each do |event| %>
-      <%= render 'events_horizontal_card', event: event %>
+    <% if @events.empty? %>
+      <h1>The events that you are searching for don't exist</h1>
+    <% else %>
+      <% @events.each do |event| %>
+        <%= render 'card', event: event %>
+      <% end %>
     <% end %>
   </div>
 </div>
