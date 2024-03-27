@@ -2,7 +2,11 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index]
 
   def index
-    @events = Event.all
+    if params[:category]
+      @events = Event.where(category: params[:category])
+    else
+      @events = Event.all
+    end
   end
 
   def home
