@@ -23,11 +23,11 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-    redirect_to event_path(@event)
+      redirect_to event_path(@event)
     else
-    render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
+    end
   end
-end
 
   def edit
     @event = Event.find(params[:id])

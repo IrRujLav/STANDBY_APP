@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: "events#home"
   get "up" => "rails/health#show", as: :rails_health_check
   resources :venues, only: [:index]
-  resources :events, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :events, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
+    resources :bookings, only: [:new, :create]
+  end
 end
