@@ -1,0 +1,14 @@
+<h1>Checkout</h1>
+<div class="event-time-date d-flex align-items-center mt-4 p-3 bg-body-secondary justify-content-between">
+      <div class="fw-bold">
+        <p class="mb-0"> <%= @event.date.strftime("%A, %d %B %Y") %> </p>
+        <p class="mb-0">@ <%= @event.time.strftime("%I:%M %p") %> </p>
+      </div>
+
+      <p class="mb-0"> <%= link_to @event.venue.name, events_path, class: "text-dark" %> </p>
+
+    </div>
+    
+<%= simple_form_for [@event, @booking] do |f| %>
+  <%= f.submit class: "btn btn-success mt-3 lh-lg w-100" %>
+<% end %>

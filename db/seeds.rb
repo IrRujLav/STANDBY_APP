@@ -2,6 +2,7 @@ Booking.destroy_all
 Event.destroy_all
 Venue.destroy_all
 User.destroy_all
+Discount.destroy_all
 
 puts "All the database destroyed"
 
@@ -105,8 +106,12 @@ Event.create!(
 )
 
 # Bookings
-Booking.create!(user_id: User.second.id, event_id: Event.first.id, status: 'confirmed')
-Booking.create!(user_id: User.third.id, event_id: Event.second.id, status: 'pending')
-Booking.create!(user_id: User.first.id, event_id: Event.third.id, status: 'confirmed')
+Booking.create!(user_id: User.second.id, event_id: Event.first.id, status: 'confirmed', paid_price: Event.first.price)
+Booking.create!(user_id: User.third.id, event_id: Event.second.id, status: 'pending', paid_price: Event.second.price)
+Booking.create!(user_id: User.first.id, event_id: Event.third.id, status: 'confirmed', paid_price: Event.third.price)
+
+# Discounts
+Discount.create!(event_id: Event.first.id, title: "StandBy", new_price: 10)
+
 
 puts "You created a new database"

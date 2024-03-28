@@ -3,6 +3,7 @@ class VenuesController < ApplicationController
     @venues = Venue.all
   end
 
+
   def new
     @venue = Venue.new
     @events = Event.all
@@ -38,5 +39,8 @@ private
 
   def venue_params
     params.require(:venue).permit(:name, :image, :location, :category)
+
+  def show
+    @venue = Venue.find(params[:id])
   end
 end
