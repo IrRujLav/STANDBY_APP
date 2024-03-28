@@ -1,0 +1,10 @@
+<div class="container">
+<%= simple_form_for(@venue) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :category %>
+    <%= f.input :image %>
+  <%= f.submit class: "btn btn-success mt-3 lh-lg w-100" %>
+<% end %>
+<%= link_to "Go Back", venues_path(@venues), class: "btn btn-secondary btn-lg mt-3 w-100" %>
+</div>
