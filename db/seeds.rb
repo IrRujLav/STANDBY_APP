@@ -109,7 +109,7 @@ Booking.create!(user_id: User.second.id, event_id: Event.first.id, status: 'conf
 Booking.create!(user_id: User.third.id, event_id: Event.second.id, status: 'pending', paid_price: Event.second.price)
 Booking.create!(user_id: User.first.id, event_id: Event.third.id, status: 'confirmed', paid_price: Event.third.price)
 
-#Discounts
+# Discounts
 Discount.create!(event_id: Event.first.id, title: "StandBy", new_price: 10)
 
 
