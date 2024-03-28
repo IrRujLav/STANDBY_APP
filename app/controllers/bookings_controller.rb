@@ -1,48 +1,24 @@
 class BookingsController < ApplicationController
-  # before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  def new
+    @booking = Booking.new
+    @event = Event.find(params[:event_id])
+  end
 
-  # def index
-  #   @bookings = Booking.all
-  # end
+  def create
+    @booking = Booking.new
+    @booking.user = current_user
+    @booking.event = Event.find(params[:event_id])
 
-  # def show
-  # end
+    if @booking.save
+      redirect_to event_path(@booking.event), notice: "Booking created successfully!"
+    else
+      render :new
+    end
+  end
 
-  # def new
-  #   @booking = Booking.new
-  # end
+  private
 
-  # def create
-  #   @booking = Booking.new(booking_params)
-  #   if @booking.save
-  #     redirect_to @booking, notice: 'Booking was successfully created.'
-  #   else
-  #     render :new
-  #   end
-  # end
-
-  # def edit
-  # end
-
-  # def update
-  #   if @booking.update(booking_params)
-  #     redirect_to @booking, notice: 'Booking was successfully updated.'
-  #   else
-  #     render :edit
-  #   end
-  # end
-
-  # def destroy
-  #   @booking.destroy
-  #   redirect_to bookings_url, notice: 'Booking was successfully destroyed.'
-  # end
-
-  # private
-  #   def set_booking
-  #     @booking = Booking.find(params[:id])
-  #   end
-
-  #   def booking_params
-  #     params.require(:booking).permit(:user_id, :event_id, :status)
-  #   end
+  def booking_params
+    params.require(:booking).permit(:status)
+  end
 end
