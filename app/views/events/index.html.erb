@@ -7,7 +7,7 @@
       <h1>The events that you are searching for don't exist</h1>
     <% else %>
       <% @events.each do |event| %>
-        <%= render 'card', event: event %>
+        <%= render 'event_horizontal_card', event: event %>
       <% end %>
     <% end %>
   </div>
