@@ -3,6 +3,7 @@ Event.destroy_all
 Venue.destroy_all
 User.destroy_all
 Discount.destroy_all
+
 puts "All the database destroyed"
 
 # Users
