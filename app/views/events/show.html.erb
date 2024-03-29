@@ -36,7 +36,7 @@
         <p class="mb-0">@ <%= @event.time.strftime("%I:%M %p") %> </p>
       </div>
 
-      <p class="mb-0"> <%= link_to @event.venue.name, events_path, class: "text-dark" %> </p>
+      <p class="mb-0"> <%= link_to @event.venue.name, venue_path(@event.venue), class: "text-dark" %> </p>
 
     </div>
 
