@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
 
     # Set a default status if it's nil( temporary solution, in future:
     # 1.solusion staus is dependent on paymant(waithing, confirmed, cancled),
-    # 2.solusion status is dependent on ovner)
+    # 2.solusion status is dependent on ovner).
     @booking.status = 'confirmed'
 
     if @booking.save
