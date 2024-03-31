@@ -1,11 +1,12 @@
-<!-- move this to booking show page or booking index page -->
-<% flash.each do |type, message| %>
+<!-- TODO: move this to booking show page or booking index page -->
+<% if flash[:notice] %>
 <div class="d-flex justify-content-center align-items-center">
-  <div class="alert alert-<%= type == 'notice' ? 'success' : 'danger'%> d-flex justify-content-center align-items-center" style="margin-top: 60px; z-index: 1000; position: relative;">
-    <%= message %>
+  <div class="alert alert-success d-flex justify-content-center align-items-center" style="margin-top: 60px; z-index: 1000; position: relative;">
+    <%= flash[:notice] %>
   </div>
 </div>
 <% end %>
+
 <div class="container p-0">
 
   <div class="d-flex justify-content-between align-items-center p-2">

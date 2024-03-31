@@ -24,7 +24,7 @@ class BookingsController < ApplicationController
 
     if @booking.save
       flash[:notice] = "Booking created successfully!"
-      redirect_to event_path(@booking.event) # change redirect to booking show page or booking index page
+      redirect_to event_path(@booking.event) # TODO: change redirect to booking show page or booking index page
     else
       flash.now[:alert] = "Booking failed to create!"
       render :new
