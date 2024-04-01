@@ -112,6 +112,6 @@ Booking.create!(user_id: User.first.id, event_id: Event.third.id, status: 'confi
 
 # Discounts
 Discount.create!(event_id: Event.first.id, title: "StandBy", new_price: 10)
-
+Discount.create!(event_id: Event.last.id, title: "StandBy", new_price: 15)
 
 puts "You created a new database"
