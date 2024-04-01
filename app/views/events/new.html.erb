@@ -2,12 +2,12 @@
 <%= simple_form_for(@event) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :image %>
   <%= f.input :venue_id, collection: @venues%>
   <%= f.input :date %>
   <%= f.input :time %>
   <%= f.input :price %>
   <%= f.input :category %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit class: "btn btn-success mt-3 lh-lg w-100" %>
 <% end %>
 

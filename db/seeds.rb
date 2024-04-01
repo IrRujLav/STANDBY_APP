@@ -1,3 +1,5 @@
+
+
 Booking.destroy_all
 Event.destroy_all
 Venue.destroy_all
@@ -13,7 +15,7 @@ jane = User.create!(email: 'jane.smith@example.com', password: 'password456', us
 mark = User.create!(email: 'mark.johnson@example.com', password: 'password789', username: 'markjohnson')
 
 # Venues
-Venue.create!(
+venue1 = Venue.new(
   name: "Cozy Cafe",
   location: "123 Main Street, Cityville",
   category: "Bar/Café",
@@ -21,7 +23,11 @@ Venue.create!(
   image: "https://images.unsplash.com/photo-1521334726092-b509a19597c6?q=80&w=3001&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
-Venue.create!(
+file1 = URI.open("https://images.unsplash.com/photo-1521334726092-b509a19597c6?q=80&w=3001&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+venue1.photos.attach(io: file1, filename: "img_for_venue_1.jpg", content_type: "image/jpg")
+venue1.save
+
+venue2 = Venue.new(
   name: "City Park Amphitheater",
   location: "City Park, Downtown",
   category: "Theater",
@@ -29,7 +35,11 @@ Venue.create!(
   image: "https://images.unsplash.com/photo-1521727284875-14f6b020d1d6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
-Venue.create!(
+file2 = URI.open("https://images.unsplash.com/photo-1521727284875-14f6b020d1d6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+venue2.photos.attach(io: file2, filename: "img_for_venue_2.jpg", content_type: "image/jpg")
+venue2.save
+
+venue3 = Venue.new(
   name: "Retro Bowling Alley",
   location: "456 Elm Street, Urbantown",
   category: "Open air",
@@ -37,9 +47,13 @@ Venue.create!(
   image: "https://images.unsplash.com/photo-1618901882475-4a8ce888ffda?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
+file3 = URI.open("https://images.unsplash.com/photo-1618901882475-4a8ce888ffda?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+venue3.photos.attach(io: file3, filename: "img_for_venue_3.jpg", content_type: "image/jpg")
+venue3.save
+
 
 # Events
-Event.create!(
+event1 = Event.new(
   name: 'Stand-up Comedy Night',
   description: 'Laugh out loud with top comedians.',
   category: 'Stand up comedy',
@@ -50,7 +64,11 @@ Event.create!(
   image: "https://images.unsplash.com/photo-1611956425642-d5a8169abd63?q=80&w=1811&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
-Event.create!(
+file1 = URI.open("https://images.unsplash.com/photo-1611956425642-d5a8169abd63?q=80&w=1811&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+event1.photos.attach(io: file1, filename: "img_for_event_1.jpg", content_type: "image/jpg")
+event1.save
+
+event2 = Event.new(
   name: 'Live Music Jam Session',
   description: 'Enjoy live music performances by local artists.',
   category: 'Live music',
@@ -61,7 +79,11 @@ Event.create!(
   image: "https://images.unsplash.com/photo-1614999098814-23c48ffa512d?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
-Event.create!(
+file2 = URI.open("https://images.unsplash.com/photo-1614999098814-23c48ffa512d?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+event2.photos.attach(io: file2, filename: "img_for_event_1.jpg", content_type: "image/jpg")
+event2.save
+
+event3 = Event.new(
   name: 'Outdoor Improv Show',
   description: 'Watch hilarious improv sketches under the stars.',
   category: 'Improv',
@@ -72,7 +94,11 @@ Event.create!(
   image: "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
-Event.create!(
+file3 = URI.open("https://images.unsplash.com/photo-1585699324551-f6c309eedeca?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+event3.photos.attach(io: file3, filename: "img_for_event_1.jpg", content_type: "image/jpg")
+event3.save
+
+event4 = Event.new(
   name: 'Outdoor Improv Show',
   description: 'Watch hilarious improv sketches under the stars.',
   category: 'Improv',
@@ -83,7 +109,11 @@ Event.create!(
   image: "https://images.unsplash.com/photo-1588928781379-c355ab3edc9b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
-Event.create!(
+file4 = URI.open("https://images.unsplash.com/photo-1588928781379-c355ab3edc9b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+event4.photos.attach(io: file4, filename: "img_for_event_1.jpg", content_type: "image/jpg")
+event4.save
+
+event5 = Event.new(
   name: 'Comedy Women',
   description: 'Take your power back',
   category: 'Improv',
@@ -94,7 +124,11 @@ Event.create!(
   image: "https://mymolo.de/wp-content/uploads/2023/01/Echolon-Open-Air-300835014_5418191394935191_5265148626473993837_n.jpeg"
 )
 
-Event.create!(
+file5 = URI.open("https://mymolo.de/wp-content/uploads/2023/01/Echolon-Open-Air-300835014_5418191394935191_5265148626473993837_n.jpeg")
+event5.photos.attach(io: file5, filename: "img_for_event_1.jpg", content_type: "image/jpg")
+event5.save
+
+event6 = Event.new(
   name: 'Improvised live',
   description: 'Come an live with us.',
   category: 'Improv',
@@ -104,6 +138,10 @@ Event.create!(
   venue_id: Venue.second.id,
   image: "https://image.urlaubspiraten.de/1024/image/upload/v1681228429/Impressions%20and%20Other%20Assets/PawnDotComAtmo1_nedc6j.jpg"
 )
+
+file6 = URI.open("https://image.urlaubspiraten.de/1024/image/upload/v1681228429/Impressions%20and%20Other%20Assets/PawnDotComAtmo1_nedc6j.jpg")
+event6.photos.attach(io: file6, filename: "img_for_event_1.jpg", content_type: "image/jpg")
+event6.save
 
 # Bookings
 Booking.create!(user_id: User.second.id, event_id: Event.first.id, status: 'confirmed', paid_price: Event.first.price)

@@ -5,7 +5,7 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
-    @events = Event.all
+    @events = Event.where(venue: @venue)
   end
 
   def new
@@ -42,7 +42,7 @@ class VenuesController < ApplicationController
 private
 
   def venue_params
-    params.require(:venue).permit(:name, :image, :location, :category)
+    params.require(:venue).permit(:name, :image, :location, :category, photos: [] )
   end
 
 end

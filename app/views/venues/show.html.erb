@@ -18,7 +18,9 @@
         background-position: center;
         background-image: linear-gradient(rgba(0,0,0,0.4),
         rgba(0,0,0,0.4)),
-        url(<%= @venue.image %>)">
+      url(<%= cl_image_path @venue.photos.first.key %>)">
+
+
         <div class="banner-txt">
           <h1 class="fw-bold text-white mb-2"> <%= @venue.name %> </h1>
           <p> <%= @venue.category %> </p>
@@ -40,7 +42,7 @@
               </div>
               <div class="carousel-inner rounded-4">
                 <div class="carousel-item active">
-                  <img src=<%= @venue.image %> class="d-block w-100" alt="...">
+                 <%= cl_image_tag @venue.photos.first.key, class: "d-block w-100", alt:"Venue image" %>
                   <div class="carousel-caption d-md-block">
                     <h5><%= @venue.name %></h5>
 
