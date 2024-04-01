@@ -6,7 +6,7 @@
 
 .event-card {
   display: flex;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px #65799a;
   height: 200px;
   align-items: end;
   background-size: cover;
@@ -31,6 +31,7 @@
 .event-card-info button {
   height: 50px;
   font-stretch: condensed;
+  background-color: #01E7C0;
 }
 
 .card-click {

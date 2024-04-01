@@ -7,6 +7,7 @@
 
 .card-horizontal {
   display: flex;
+  background-color: #65799a;
 }
 
 .img-fluid {
@@ -16,7 +17,7 @@
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 #65799a;
     h5 {
       font-family: Arial, sans-serif;
       font-weight: bold;

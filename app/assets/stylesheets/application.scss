@@ -10,5 +10,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/home";
 
 // Your events css
+.page-color {
+    background-color:#1e1e1f;
+  }
