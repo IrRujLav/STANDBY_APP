@@ -4,7 +4,7 @@
       <h1 style="text-align: center;"><strong>Events</strong></h1>
     </div>
     <% if @events.empty? %>
-      <h1>The events that you are searching for don't exist</h1>
+      <h1>Ups, there are no events like that!</h1>
     <% else %>
       <% @events.each do |event| %>
         <%= render 'event_horizontal_card', event: event %>

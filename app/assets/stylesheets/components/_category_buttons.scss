@@ -24,11 +24,16 @@
 .category-buttons .category-filter {
   margin-right: 20px;
   min-width: 120px;
-  color: white;
+  color: #7BB602;
   text-align: center;
   padding: 12px 6px;
   border-radius: 30px;
+  border-color: #7BB602;
   transition: background-color .3s, color .3s, border-color .3s;
   background-color: rgb(41, 40, 40);
-
+}
+.category-buttons .category-filter:hover {
+  color: #f478cf;
+  border-color: #f478cf;
+  transition: 0.3s;
 }
