@@ -3,7 +3,7 @@
   <%= f.input :name %>
   <%= f.input :location %>
   <%= f.input :category %>
-  <%= f.input :image %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit class: "btn btn-outline-warning mt-3 lh-lg w-100" %>
 <% end %>
 <%= link_to "Go Back", venues_path(@venues), class: "btn btn-secondary btn-lg mt-3 w-100" %>

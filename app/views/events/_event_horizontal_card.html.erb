@@ -2,7 +2,10 @@
 <div class="card mb-3 card-horizontal">
   <div class="row">
     <div class="col-sm-8 d-flex justify-content-center align-items-center pv-4 px-0">
-      <img src="<%= event.image %>" class="img-fluid rounded-start" alt="Event image">
+
+      <%= cl_image_tag event.photos.first.key, class: "img-fluid rounded-start", alt:"Event image" %>
+
+
     </div>
     <div class="col-sm-4">
       <div class="card-body">

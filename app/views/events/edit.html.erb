@@ -2,11 +2,11 @@
 <%= simple_form_for(@event) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :image %>
   <%= f.input :date %>
   <%= f.input :time %>
   <%= f.input :price %>
   <%= f.input :category %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit class: "btn btn-outline-warning mt-3 lh-lg w-100" %>
   <%= link_to "Go Back", events_path(@events), class: "btn btn-secondary btn-lg mt-3 w-100" %>
 </div>

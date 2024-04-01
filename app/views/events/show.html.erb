@@ -15,13 +15,16 @@
 
     <div class="event-head text-center">
       <div class="banner d-flex justify-content-center align-items-center"
+
         style="
         height: 300px;
         background-size: cover;
         background-position: center;
         background-image: linear-gradient(rgba(0,0,0,0.4),
         rgba(0,0,0,0.4)),
-        url(<%= @event.image %>)">
+        url(<%= cl_image_path @event.photos.first.key %>)">
+
+
 
         <div class="banner-txt">
           <h1 class="fw-bold text-white mb-3"> <%= @event.name %> </h1>
