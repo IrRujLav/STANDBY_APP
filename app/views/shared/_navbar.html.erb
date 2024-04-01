@@ -1,4 +1,4 @@
-<ul class="navbar-links fs-1 p-2 m-0 d-flex gap-5 list-unstyled">
+<ul class="navbar-links fs-1 p-2 m-0 d-flex gap-5 list-unstyled align-items-center">
 
   <%# Events %>
   <li>
@@ -11,7 +11,7 @@
   </li>
 
   <%# Bookings %>
-  <li>
-    <%= link_to events_path, class: 'nav-btn text-black' do %><i class="fa-regular fa-bookmark"></i><% end %>
+  <li class="align-items-center">
+    <%= link_to events_path, class: 'nav-btn text-black' do %><i class="fa-solid fa-ticket"></i><% end %>
   </li>
 </ul>
