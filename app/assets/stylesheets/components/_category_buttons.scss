@@ -29,11 +29,12 @@
   padding: 12px 6px;
   border-radius: 30px;
   border-color: #7BB602;
-  transition: background-color .3s, color .3s, border-color .3s;
+  // transition: background-color .3s, color .3s, border-color .3s;
+  transition: color 0.3s ease-in-out;
   background-color: rgb(41, 40, 40);
 }
 .category-buttons .category-filter:hover {
   color: #f478cf;
   border-color: #f478cf;
-  transition: 0.3s;
+  // transition: 0.3s;
 }
