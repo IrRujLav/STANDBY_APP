@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" data-controller="toggle-menu">
   <div class="container-fluid">
     <%= link_to(root_path, class: "navbar-brand") do %>
       <%= image_tag("SBLogo.png", alt: "Logo", class: "logo-img") %>
@@ -10,13 +10,18 @@
               <%= link_to events_path, class: 'nav-btn text-black' do %><i class="fa-solid fa-magnifying-glass"></i><% end %>
           </li>
 
-            <li class="nav-item dropdown">
-              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Some Link", events_path, class: "dropdown-item" %>
-                  <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-              </div>
-            </li>
+           <li>
+           <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" data-action="click->toggle-menu#closeNav">&times;</a>
+  <%=link_to "Tickets Terms", terms_path %>
+  <%=link_to "Profile", terms_path %>
+  <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+</div>
+
+<button class="openbtn" data-action="click->toggle-menu#openNav">
+<img class= "avatar" src="https://media.licdn.com/dms/image/D5603AQGapAAA8Y0I0Q/profile-displayphoto-shrink_800_800/0/1691077903431?e=1717632000&v=beta&t=I6ywiR9zm_xjMiv1KcEU-ESad8BIO4pCDNsjEcXk2eA" alt="Profile Pic">
+</button>
+           </li>
         <% else  %>
           <li>
             <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>

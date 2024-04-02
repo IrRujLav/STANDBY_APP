@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings
+  get "terms_and_conditions" => "pages#terms_and_conditions", as: :terms
 end

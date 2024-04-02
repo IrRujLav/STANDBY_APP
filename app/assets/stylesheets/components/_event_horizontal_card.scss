@@ -2,12 +2,13 @@
 
 .card-body  {
   // width: 100vw;
+  color: #D7E4EC;
 }
 
 
 .card-horizontal {
   display: flex;
-  background-color: #65799a;
+  background-color: #303132;
 }
 
 .img-fluid {
@@ -21,9 +22,11 @@
     h5 {
       font-family: Arial, sans-serif;
       font-weight: bold;
+      color: #D7E4EC;
     }
     p {
       font-family: Arial, sans-serif;
+      color:#D7E4EC;
     }
 }
 
