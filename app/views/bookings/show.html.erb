@@ -1,0 +1,26 @@
+
+<div class="container mt-4">
+  <span style="">
+    <%= link_to '<i class="fa-solid fa-angle-left"></i> Back'.html_safe, bookings_path, class: "text-black link-underline link-underline-opacity-0 rounded-pill bg-white", style: "padding:10px" %>
+  </span>
+
+  <h1 class="text-white d-flex justify-content-center my-4"> Your ticket</h1>
+
+
+
+  <div class="ticket-container text-align-center p-3 m-4 bg-white rounded-4">
+
+    <div class="qr-code">
+      <img class="rounded-4" src="<%= asset_url("ticketqrcode.jpeg") %>" alt="qr-code" width="100%">
+    </div>
+
+    <div class="text-center mt-2">
+      <h4 class="fw-bold"> <%= @booking.event.name %> </h4>
+      <p class="fw-monospace"> <i class="fa-solid fa-location-dot"></i> <%= link_to @booking.event.venue.location .html_safe, "https://www.google.com/search?q=#{@booking.event.venue.location.gsub(" ", "+")}", class: 'text-secondary link-underline link-underline-opacity-0' %> </p>
+      <p class="mt-4"> <%= @booking.event.date.strftime("%A, %d %B %Y") %> </p>
+      <p> <%= @booking.event.time.strftime("%I:%M %p") %> </p>
+
+    </div>
+
+  </div>
+</div>

@@ -1,4 +1,4 @@
-<h1 class="d-flex justify-content-center text-align-center py-4">My bookings</h1>
+<h1 class="d-flex justify-content-center text-align-center py-4 text-white">My bookings</h1>
 
 <div class="bookings-container d-flex justify-content-center">
   <ul class="bookings-list list-unstyled">
@@ -6,7 +6,7 @@
     <li class="mb-5 bg-white p-4 rounded-4">
 
       <h4 class="fw-bold"> <%= booking.event.name %> </h4>
-      <p class="fw-monospace"> <i class="fa-solid fa-location-dot"></i> <%= link_to booking.event.venue.location .html_safe, "https://google.com/maps/place/#{booking.event.venue.location.gsub(" ", "+")}", class: 'text-secondary link-underline link-underline-opacity-0' %> </p>
+      <p class="fw-monospace"> <i class="fa-solid fa-location-dot"></i> <%= link_to booking.event.venue.name .html_safe, "https://www.google.com/search?q=#{booking.event.venue.location.gsub(" ", "+")}", class: 'text-secondary link-underline link-underline-opacity-0' %> </p>
       <p class=> <%= booking.event.date.strftime("%A, %d %B %Y") %> </p>
       <p> <%= booking.event.time.strftime("%I:%M %p") %> </p>
       <span class="d-flex justify-content-end"><%= link_to '<i class="fa-solid fa-qrcode"></i> Ticket'.html_safe, booking_path(booking), class: 'btn btn-info shadow smaller-button rounded-pill' %></span>
