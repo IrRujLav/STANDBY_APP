@@ -55,7 +55,7 @@ venue3.save
 # Events
 event1 = Event.new(
   name: 'Stand-up Comedy Night',
-  description: 'Laugh out loud with top comedians.',
+  description: 'Join us for a special evening dedicated to celebrating the comedic genius of Tina Fey! From her iconic performances on "Saturday Night Live" to her groundbreaking work as a writer, actress, and producer, Tina Fey has left an indelible mark on the world of comedy. This event is a tribute to her talent, wit, and enduring influence on pop culture.',
   category: 'Stand up comedy',
   price: 20,
   date: Date.today + 2,
@@ -69,8 +69,8 @@ event1.photos.attach(io: file1, filename: "img_for_event_1.jpg", content_type: "
 event1.save
 
 event2 = Event.new(
-  name: 'Live Music Jam Session',
-  description: 'Enjoy live music performances by local artists.',
+  name: 'Enjoy live music performances by local artists.',
+  description: 'Embark on a one-of-a-kind adventure with "Nature Walk Improv: A Journey Through Spontaneity." Explore the beauty of [Park Name] while enjoying live improv performances inspired by the wonders of nature.',
   category: 'Live music',
   price: 10,
   date: Date.today + 3,
@@ -84,8 +84,8 @@ event2.photos.attach(io: file2, filename: "img_for_event_1.jpg", content_type: "
 event2.save
 
 event3 = Event.new(
-  name: 'Outdoor Improv Show',
-  description: 'Watch hilarious improv sketches under the stars.',
+  name: 'Watch hilarious improv sketches under the stars.',
+  description: 'Join us for a special evening dedicated to celebrating the comedic genius of Tina Fey! From her iconic performances on "Saturday Night Live" to her groundbreaking work as a writer, actress, and producer, Tina Fey has left an indelible mark on the world of comedy. This event is a tribute to her talent, wit, and enduring influence on pop culture.',
   category: 'Improv',
   price: 15,
   date: Date.today + 10,
@@ -100,7 +100,7 @@ event3.save
 
 event4 = Event.new(
   name: 'Outdoor Improv Show',
-  description: 'Watch hilarious improv sketches under the stars.',
+  description: 'Embark on a one-of-a-kind adventure with "Nature Walk Improv: A Journey Through Spontaneity." Explore the beauty of [Park Name] while enjoying live improv performances inspired by the wonders of nature.',
   category: 'Improv',
   price: 15,
   date: Date.today,
@@ -115,7 +115,7 @@ event4.save
 
 event5 = Event.new(
   name: 'Comedy Women',
-  description: 'Take your power back',
+  description: 'Experience the magic of outdoor theater at our Picnic Blanket Theater event! Join us for an enchanting evening under the stars as we present a live performance of [choose a play, musical, or series of short acts]. Bring your picnic blanket, pack a delicious spread of snacks and beverages, and settle in for a night of laughter, drama, and unforgettable memories with friends, family, and fellow theater enthusiasts.',
   category: 'Improv',
   price: 10,
   date: Date.today + 2,
@@ -129,8 +129,8 @@ event5.photos.attach(io: file5, filename: "img_for_event_1.jpg", content_type: "
 event5.save
 
 event6 = Event.new(
-  name: 'Improvised live',
-  description: 'Come an live with us.',
+  name: 'Movie Night',
+  description: 'Join us for a laid-back evening celebrating "The Big Lebowski," the cult classic film that has inspired a devoted following of fans, affectionately known as "Achievers." Whether you\'re a die-hard fan or new to the world of the Dude, this event is a chance to immerse yourself in the offbeat humor and unforgettable characters of this beloved film. So grab your bathrobe, bowling shoes, and favorite beverage (White Russians encouraged) as we pay homage to the Dude and his epic quest for a new rug.',
   category: 'Improv',
   price: 10,
   date: Date.today + 3,
