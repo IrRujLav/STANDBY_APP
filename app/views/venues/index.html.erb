@@ -1,5 +1,10 @@
 <div class="container">
-  <h2 class="d-flex justify-content-center mb-4 mt-5 fs-1">Venues</h2>
+  <h2 class="mb-4 mt-5 fs-1 text-center">Venues</h2>
+
+   <div class="d-flex justify-content-center">
+    <%= link_to "Create", new_venue_path, class: "btn btn-outline-warning mt-3 mb-3 lh-lg w-50 text-center" %>
+   </div>
+
   <ul class="list-unstyled">
     <% @venues.each do |venue| %>
     <li class="bg-white shadow p-3 mb-5 bg-body-tertiary rounded-4 text-center">
