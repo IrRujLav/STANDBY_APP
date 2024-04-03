@@ -17,12 +17,12 @@
       <div class="header-container">
         <%= render "shared/header" %>
       </div>
-      <%= render "shared/flashes" %>
+      <%= render "shared/flashes" %> <!-- This is for flash notice and alert -->
       <div class="content-container">
         <%= yield %>
 
         <!--<p class="notice"><%= notice %></p>-->
-        <p class="alert"><%= alert %></p>
+        <!--<p class="alert"><%= alert %></p>-->
       </div>
 
       <div class="navbar-container d-flex justify-content-center sticky-bottom bg-white">
