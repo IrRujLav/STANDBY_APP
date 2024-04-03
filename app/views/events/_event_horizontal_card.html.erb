@@ -1,6 +1,7 @@
 
 <div class="card mb-3 card-horizontal">
   <div class="row">
+
     <div class="col-sm-8 d-flex justify-content-center align-items-center pv-4 px-0">
 
       <%= cl_image_tag event.photos.first.key, class: "img-fluid rounded-start", alt:"Event image" %>
@@ -9,6 +10,11 @@
     </div>
     <div class="col-sm-4">
       <div class="card-body">
+
+
+          <% if current_user.owner && current_user.id == event.venue.user_id %>
+            <p class="text-center rounded-3 p-2 bg-secondary">Your event</p>
+          <% end %>
         <h5 class="card-title"><%= event.name %></h5>
         <p class="card-text">
           <%= link_to "<i class='fa-solid fa-masks-theater'></i> #{event.venue.name}".html_safe, venue_path(event.venue), class: "btn btn-info shadow smaller-button rounded-pill" %>
