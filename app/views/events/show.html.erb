@@ -56,6 +56,10 @@
     <% if current_user&.owner && current_user.id == @event.venue.user_id %>
       <div class="venue-links d-flex justify-content-center mt-4">
         <%= link_to "Edit", edit_event_path, class: "btn btn-warning rounded-0" %>
+
+     
+
+
         <%= link_to "Delete",
           event_path(@event),
           data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
