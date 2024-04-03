@@ -8,7 +8,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    
+
   </head>
 
 
@@ -17,10 +17,11 @@
       <div class="header-container">
         <%= render "shared/header" %>
       </div>
-
+      <%= render "shared/flashes" %>
       <div class="content-container">
         <%= yield %>
-        <p class="notice"><%= notice %></p>
+
+        <!--<p class="notice"><%= notice %></p>-->
         <p class="alert"><%= alert %></p>
       </div>
 
