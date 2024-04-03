@@ -6,33 +6,42 @@
 
 .event-card {
   display: flex;
-  box-shadow: 0 0 5px #65799a;
+  box-shadow: 0 0 5px $sexy-pink;
   height: 200px;
   align-items: end;
   background-size: cover;
   background-position: center;
-  margin-right: 16px;
+  margin: 16px;
   border-radius: 18px;
 
+      .first-line
+    { font-size: smaller;
+    }
+.second-line {
+  font-size: x-large;
+  font-weight: bolder;
+  color: $new-green;
+}
+}
+
+.event-card:hover {
+  box-shadow: 0 0 5px $new-green;
+  .second-line 
+  {
+  color: $sexy-pink;
+  }
 }
 
 
 .event-card-info{
-  max-height: 100px;
   width: 80vw;
   color: white;
   padding: 10px;
-  text-align: left;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   padding: 15px;
   align-items: center;
-}
-
-.event-card-info button {
-  height: 50px;
-  font-stretch: condensed;
-  background-color: #01E7C0;
 }
 
 .card-click {
