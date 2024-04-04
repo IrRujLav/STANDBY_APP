@@ -3,8 +3,10 @@
     <div class="col-sm-12">
       <h1 style="text-align: center;"><strong class="events-page-title">Events</strong></h1>
 
+    <% if current_user&.owner %>
         <div class="d-flex justify-content-center">
     <%= link_to "Create", new_event_path, class: "btn btn-outline-warning mt-3 mb-3 lh-lg w-50 text-center" %>
+    <% end %>
    </div>
     </div>
     <% if @events.empty? %>
