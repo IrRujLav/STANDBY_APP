@@ -21,9 +21,9 @@
         <% if @event.discounts.last.try(:new_price).nil? %>
           <p class="mb-0 col-6 text-center">REGULAR PRICE</p> <p class="mb-0 col-6 text-end"><%= @event.price %><i class="fa-solid fa-euro-sign"></i></p>
         <% else %>
-          <p class="mb-0 col-6 text-center">REGULAR PRICE</p> <p class="mb-0 col-6 text-end"><%= @event.price %><i class="fa-solid fa-euro-sign"></i></p>
-          <p class="mb-0 col-6 text-center">LAST-MINUTE SAVINGS</p> <p class="mb-0 col-6 text-end"><%= @event.discounts.last.try(:new_price) %><i class="fa-solid fa-euro-sign"></i></p>
-          <p class="mb-0 col-6 text-center">FINAL PRICE</p> <p class="mb-0 col-6 text-end"><%= @booking.paid_price %><i class="fa-solid fa-euro-sign"></i></p>
+          <p class="mb-0 col-6 text-center booking-text">REGULAR PRICE</p> <p class="mb-0 col-6 text-end booking-text"><%= @event.price %><i class="fa-solid fa-euro-sign"></i></p>
+          <p class="mb-0 col-6 text-center booking-text">LAST-MINUTE SAVINGS</p> <p class="mb-0 col-6 text-end booking-text"><%= @event.discounts.last.try(:new_price) %><i class="fa-solid fa-euro-sign"></i></p>
+          <p class="mb-0 col-6 text-center booking-text">FINAL PRICE</p> <p class="mb-0 col-6 text-end booking-text"><%= @booking.paid_price %><i class="fa-solid fa-euro-sign"></i></p>
         <% end %>
       </div>
     </div>

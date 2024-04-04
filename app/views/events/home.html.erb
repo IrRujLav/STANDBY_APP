@@ -7,7 +7,7 @@
   <div class="banner-text">
     <h1> <strong>StandByApp</strong></h1>
     <h2>The app where your time turns into money</h2>
-    <h3>Buy StandBy tickets for your favourite events. Get a massive descount. Come to the venue. If you don't get a slot, get your money back </h3>
+    <h3>Buy StandBy tickets for your favourite events. Get a massive discount. Come to the venue. If you don't get a slot, get your money back! </h3>
     <%# <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
     <div class="category-buttons">
@@ -18,7 +18,7 @@
       <%= link_to "Theater", events_path(category:"Theater"), class: "category-filter justify-content-start btn btn-secondary" %>
     </div>
 </div>
-
+<h1 class="events-page-title" >Events happening right now!</h1>
 <div class="events">
   <% @events.sort_by {|e| [e.date, e.time] }.each do |event|%>
       <%= render "event_vertical_card", event: event %>
@@ -28,7 +28,7 @@
 <div class="events-container" style="margin-top: 20px;">
   <div class="row ">
     <div class="col-sm-12">
-      <h1 style="text-align: center;" >Events</h1>
+      <h1 class="events-page-title" >Events close to you!</h1>
     </div>
   </div>
 
