@@ -1,9 +1,12 @@
 <div class="container">
   <h2 class="mb-4 mt-5 fs-1 text-center">Venues</h2>
 
+  <% if current_user&.owner %>
+
    <div class="d-flex justify-content-center">
     <%= link_to "Create", new_venue_path, class: "btn btn-outline-warning mt-3 mb-3 lh-lg w-50 text-center" %>
    </div>
+  <% end %>
 
   <ul class="list-unstyled">
     <% @venues.each do |venue| %>
