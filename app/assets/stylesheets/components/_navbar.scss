@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: $light-black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -19,9 +19,19 @@
 
  .navbar-container {
     width: 100vw;
+    background-color: $light-black;
+
 
 }
 
 .content-container {
   width: 100vw;
+}
+
+.icon {
+  color: $sexy-pink;
+}
+
+.icon:hover {
+  color:$new-green;
 }

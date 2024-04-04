@@ -17,15 +17,16 @@
       <div class="header-container">
         <%= render "shared/header" %>
       </div>
-      <%= render "shared/flashes" %> <!-- This is for flash notice and alert -->
-      <div class="content-container">
+      <%= render "shared/flashes" %>
+      <%# high risk temporary soultion!!! %>
+      <div class="content-container" style="overflow-x:hidden">
         <%= yield %>
 
         <!--<p class="notice"><%= notice %></p>-->
         <!--<p class="alert"><%= alert %></p>-->
       </div>
 
-      <div class="navbar-container d-flex justify-content-center sticky-bottom bg-white">
+      <div class="navbar-container d-flex justify-content-center sticky-bottom bg">
         <%= render "shared/navbar" %>
       </div>
 

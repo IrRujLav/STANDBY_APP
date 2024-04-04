@@ -18,7 +18,7 @@
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 #65799a;
+  box-shadow: 0 4px 8px 0 $new-green;
     h5 {
       font-family: Arial, sans-serif;
       font-weight: bold;
@@ -40,4 +40,9 @@
 
 .smaller-button {
   padding: 4px 12px !important;
+}
+
+.change {
+  color: $sexy-pink;
+  font-size: small;
 }

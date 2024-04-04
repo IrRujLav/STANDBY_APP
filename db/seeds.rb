@@ -120,7 +120,7 @@ venue8.save
 # Events
 event1 = Event.new(
   name: 'Tribute to Tina: An Evening Celebrating Tina Fey',
-  description: 'Join us for a special evening dedicated to celebrating the comedic genius of Tina Fey! From her iconic performances on "Saturday Night Live" to her groundbreaking work as a writer, actress, and producer, Tina Fey has left an indelible mark on the world of comedy. This event is a tribute to her talent, wit, and enduring influence on pop culture.',
+  description: 'Join us for a special evening dedicated to celebrating the comedic genius of Tina Fey! From her iconic performances on "Saturday Night Live" to her groundbreaking work as a writer, actress, and producer.',
   category: 'Stand up comedy',
   price: 20,
   date: Date.today,
@@ -135,7 +135,7 @@ event1.save
 
 event2 = Event.new(
   name: 'Sunset Serenade: An Evening of Music and Poetry',
-  description: 'Embark on a one-of-a-kind adventure with "Nature Walk Improv: A Journey Through Spontaneity." Explore the beauty of [Park Name] while enjoying live improv performances inspired by the wonders of nature.',
+  description: 'Embark on a one-of-a-kind adventure with "Nature Walk Improv: A Journey Through Spontaneity." Explore the beauty of City Park while enjoying live improv performances inspired by the wonders of nature.',
   category: 'Live music',
   price: 10,
   date: Date.today + 3,
@@ -150,7 +150,7 @@ event2.save
 
 event3 = Event.new(
   name: 'Park Bench Stories: An Outdoor Improv Experience',
-  description: 'Join us for an unforgettable evening of laughter and spontaneity at "Park Bench Stories: An Outdoor Improv Experience." Set against the picturesque backdrop of [Park Name], this unique improv show brings the joy of improvisational theater to the great outdoors.',
+  description: 'Join us for an unforgettable evening of laughter and spontaneity at "Park Bench Stories: An Outdoor Improv Experience." Set against the picturesque backdrop of Treptower, this unique improv show brings the joy of improvisational theater to the great outdoors.',
   category: 'Improv',
   price: 15,
   date: Date.today + 10,
@@ -165,7 +165,7 @@ event3.save
 
 event4 = Event.new(
   name: 'Nature Walk Improv: A Journey Through Spontaneity',
-  description: 'Embark on a one-of-a-kind adventure into the world of improvisational theater with Nature Walk Improv: A Journey Through Spontaneity! Join us for a unique and immersive experience that combines the beauty of nature with the spontaneity of improv comedy. Led by seasoned improvisers and nature enthusiasts, this guided nature walk will take you on a journey of exploration, discovery, and laughter as we use the natural environment as our stage and inspiration. Whether you are a seasoned improviser or a complete beginner, this event offers a refreshing and invigorating way to connect with nature and unleash your creativity in the great outdoors.',
+  description: 'Embark on a one-of-a-kind adventure into the world of improvisational theater with Nature Walk Improv: A Journey Through Spontaneity! Join us for a unique and immersive experience that combines the beauty of nature with the spontaneity of improv comedy.',
   category: 'Improv',
   price: 15,
   date: Date.today,
@@ -180,7 +180,7 @@ event4.save
 
 event5 = Event.new(
   name: 'Comedy Club Showcase: A Night of Laughter and Entertainment',
-  description: 'Get ready for an evening of hilarity and side-splitting comedy at the Comedy Club Showcase! Join us for a showcase of some of the funniest comedians in town as they take the stage to deliver gut-busting performances that will leave you in stitches. Whether you are a seasoned comedy aficionado or just looking for a night of laughter and entertainment, this is an event you would not want to miss!',
+  description: 'Get ready for an evening of hilarity and side-splitting comedy at the Comedy Club Showcase! Join us for a showcase of some of the funniest comedians in town!',
   category: 'Stand up comedy',
   price: 10,
   date: Date.today + 2,
@@ -195,7 +195,7 @@ event5.save
 
 event6 = Event.new(
   name: 'The Big Lebowski',
-  description: 'Join us for a laid-back evening celebrating "The Big Lebowski," the cult classic film that has inspired a devoted following of fans, affectionately known as "Achievers." Whether you\'re a die-hard fan or new to the world of the Dude, this event is a chance to immerse yourself in the offbeat humor and unforgettable characters of this beloved film. So grab your bathrobe, bowling shoes, and favorite beverage (White Russians encouraged) as we pay homage to the Dude and his epic quest for a new rug.',
+  description: 'Join us for a laid-back evening celebrating "The Big Lebowski," the cult classic film that has inspired a devoted following of fans, affectionately known as "Achievers.',
   category: 'Improv',
   price: 30,
   date: Date.today,
@@ -211,7 +211,7 @@ event6.save
 
 event7 = Event.new(
   name: 'Laugh Factory Presents: Friday Night Funnies',
-  description: 'Get ready for a night of side-splitting laughter and non-stop entertainment at Laugh Factory Presents: Friday Night Funnies! Join us for an evening of top-notch stand-up comedy featuring some of the funniest comedians in the business. From up-and-coming talents to seasoned veterans, our lineup is guaranteed to leave you rolling in the aisles with laughter. So gather your friends, grab a drink, and get ready for a comedy experience you would not soon forget!',
+  description: 'Get ready for a night of side-splitting laughter and non-stop entertainment at Laugh Factory Presents: Friday Night Funnies! Join us for an evening of top-notch stand-up comedy featuring some of the funniest comedians in the business.',
   category: 'Stand up comedy',
   price: 35,
   date: Date.today,
@@ -226,7 +226,7 @@ event7.save
 
 event8 = Event.new(
   name: 'Jazz Night with The Smooth Operators',
-  description: 'Indulge in an evening of smooth jazz and soulful melodies at Jazz Night with The Smooth Operators! Join us for a night of live music performed by our acclaimed jazz ensemble, The Smooth Operators, as they serenade you with their signature blend of classic jazz standards, soulful ballads, and funky grooves. Whether you are a jazz aficionado or simply looking for a stylish night out on the town, this event promises to transport you to a world of timeless melodies and effortless sophistication.',
+  description: 'Indulge in an evening of smooth jazz and soulful melodies at Jazz Night with The Smooth Operators! Join us for a night of live music performed by our acclaimed jazz ensemble.',
   category: 'Live music',
   price: 27,
   date: Date.today + 3,
@@ -241,7 +241,7 @@ event8.save
 
 event9 = Event.new(
   name: 'Acoustic Sessions Open Mic',
-  description: 'Unplug and unwind at our Acoustic Sessions Open Mic event! Join us for an evening of stripped-down performances and raw talent as local musicians, singers, and songwriters take the stage to share their acoustic creations. Whether you are a seasoned performer or a first-time open mic participant, our event provides a supportive and welcoming environment for artists of all levels to showcase their skills and connect with fellow music lovers. So grab your guitar, tune up your vocals, and join us for a night of acoustic magic!',
+  description: 'Unplug and unwind at our Acoustic Sessions Open Mic event! Join us for an evening of stripped-down performances and raw talent as local musicians, singers, and songwriters take the stage to share their acoustic creations.',
   category: 'Open mic',
   price: 45,
   date: Date.today + 10,
@@ -256,7 +256,7 @@ event9.save
 
 event10 = Event.new(
   name: 'The Importance of Being Earnest',
-  description: 'Step into the witty and whimsical world of Oscar Wilde The Importance of Being Earnest at our special event! Join us for an evening of theatrical delight as we present a live performance of this timeless comedy, filled with sparkling dialogue, mistaken identities, and hilarious misunderstandings. Whether you are a fan of classic literature or simply looking for a night of laughter and entertainment, this event promises to delight audiences of all ages with its sharp wit and delightful humor.',
+  description: 'Step into the witty and whimsical world of Oscar Wilde The Importance of Being Earnest at our special event! Join us for an evening of theatrical delight as we present a live performance of this timeless comedy.',
   category: 'Theater',
   price: 15,
   date: Date.today,
@@ -271,7 +271,7 @@ event10.save
 
 event11 = Event.new(
   name: 'Comedy Cellar Showcase',
-  description: 'Get ready for a night of laughter and entertainment at the Comedy Cellar Showcase! Join us for an evening of stand-up comedy featuring a lineup of talented comedians handpicked from the legendary Comedy Cellar in New York City. From up-and-coming stars to seasoned veterans, our showcase offers a diverse array of comedic styles and perspectives guaranteed to keep you laughing all night long. So grab your friends, grab a drink, and get ready for a comedy experience you wont soon forget!',
+  description: 'Get ready for a night of laughter and entertainment at the Comedy Cellar Showcase! Join us for an evening of stand-up comedy featuring a lineup of talented comedians handpicked from the legendary Comedy Cellar in New York City',
   category: 'Stand up comedy',
   price: 15,
   date: Date.today + 2,
@@ -286,7 +286,7 @@ event11.save
 
 event12 = Event.new(
   name: 'Whose Line Is It Anyway?',
-  description: 'Join us for a laid-back evening celebrating "The Big Lebowski," the cult classic film that has inspired a devoted following of fans, affectionately known as "Achievers." Whether you\'re a die-hard fan or new to the world of the Dude, this event is a chance to immerse yourself in the offbeat humor and unforgettable characters of this beloved film. So grab your bathrobe, bowling shoes, and favorite beverage (White Russians encouraged) as we pay homage to the Dude and his epic quest for a new rug.',
+  description: 'Experience the vibrant pulse of the waterfront at Harborfront Happenings, a series of dynamic and diverse events that celebrate the spirit of community, culture, and creativity along the waterfront.',
   category: 'Improv',
   price: 30,
   date: Date.today,
