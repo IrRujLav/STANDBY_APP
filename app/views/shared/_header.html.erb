@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" data-controller="toggle-menu">
   <div class="container-fluid">
     <%= link_to(root_path, class: "navbar-brand") do %>
-      <%= image_tag("SBLogo.png", alt: "Logo", class: "logo-img") %>
+      <%= image_tag("SBLogowhite.png", alt: "Logo", class: "logo-img") %>
     <% end %>
       <ul class="navbar-nav flex-row gap-3 align-items-center">
         <% if user_signed_in? %>
@@ -24,7 +24,7 @@
            </li>
         <% else  %>
           <li>
-            <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+            <%= link_to "Log in", new_user_session_path, class: "dropdown-item text-white" %>
           </li>
         <% end %>
       </ul>
