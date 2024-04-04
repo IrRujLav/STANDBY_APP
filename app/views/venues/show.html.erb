@@ -80,16 +80,18 @@
       <p> <%= @venue.name %> is a place for open-minded, friendly and ready to have fun personalities. The event will take place here : <%= @venue.location %> </p>
     </div>
 
-    <div class="venue-links d-flex justify-content-center mt-4">
-      <%= link_to "Edit", edit_event_path, class: "btn btn-warning rounded-0" %>
+<% if current_user&.owner && current_user.id == @venue.user_id %>
 
+
+    <div class="venue-links d-flex justify-content-center mt-4">
+      <%= link_to "Edit", edit_venue_path, class: "btn btn-warning rounded-0" %>
       <%= link_to "Delete",
         venue_path(@venue),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
         class: "btn btn-secondary rounded-0"
       %>
     </div>
-
+    <% end %>
   </div>
 
 

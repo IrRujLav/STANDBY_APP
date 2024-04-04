@@ -21,11 +21,12 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    @venues = Venue.all
+    @venues = Venue.where(user_id: current_user.id)
   end
 
   def create
     @event = Event.new(event_params)
+
     if @event.save
       redirect_to event_path(@event)
     else
