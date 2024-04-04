@@ -18,7 +18,8 @@
         <%= render "shared/header" %>
       </div>
       <%= render "shared/flashes" %>
-      <div class="content-container">
+      <%# high risk temporary soultion!!! %>
+      <div class="content-container" style="overflow-x:hidden">
         <%= yield %>
 
         <!--<p class="notice"><%= notice %></p>-->
