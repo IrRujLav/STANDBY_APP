@@ -2,7 +2,7 @@
 
   <div class="d-flex justify-content-between align-items-center p-2">
     <span>
-      <%= link_to "<– Back", events_path, class: "justify-content-start btn btn-dark rounded-pill" %>
+      <%= link_to "<– Back", events_path, class: "justify-content-start btn btn-dark rounded-pill green-button" %>
     </span>
 
 
@@ -28,7 +28,7 @@
 
         <div class="banner-txt">
           <h1 class="fw-bold text-white mb-3"> <%= @event.name %> </h1>
-          <%= link_to "buy for $#{ @event.price }", new_event_booking_path(@event), class: "btn btn-dark fs-4 rounded-pill border border-light-subtle" %>
+          <%= link_to "buy for #{ @event.price } €", new_event_booking_path(@event), class: "btn btn-dark rounded-pill pink-button" %>
         </div>
       </div>
     </div>
@@ -45,16 +45,16 @@
 
 
     <div class="event-txt px-4">
-      <h5 class="mt-5 fw-bold">Event description</h5>
+      <h5 class="mt-5 fw-bold event-description">Event description</h5>
       <p> <%= @event.description %> </p>
-      <h5 class="mt-4 fw-bold">Category</h5>
+      <h5 class="mt-4 fw-bold event-description ">Category</h5>
       <p> <%= @event.category %> </p>
-      <h5 class="mt-4 fw-bold">About the Organization</h5>
+      <h5 class="mt-4 fw-bold event-description">About the Organization</h5>
       <p> <%= @event.venue.name %> is a place for open-minded, friendly and ready to have fun personalities. The event will take place here : <%= @event.venue.location %> </p>
     </div>
 
     <% if current_user&.owner && current_user.id == @event.venue.user_id %>
-    
+
       <div class="venue-links d-flex justify-content-center mt-4">
         <%= link_to "Edit", edit_event_path, class: "btn btn-warning rounded-0" %>
         <%= link_to "Delete",

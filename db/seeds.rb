@@ -13,6 +13,7 @@ john = User.create!(email: 'john.doe@example.com', password: 'password123', user
 jiregna = User.create!(email: 'jiregna@example.com', password: '123456', username: 'jiregna', owner: true)
 jane = User.create!(email: 'jane.smith@example.com', password: 'password456', username: 'janesmith')
 mark = User.create!(email: 'mark.johnson@example.com', password: 'password789', username: 'markjohnson')
+irene = User.create!(email: 'irene@gmail.com', password: '123456', username: 'irene')
 
 # Venues
 venue1 = Venue.new(
