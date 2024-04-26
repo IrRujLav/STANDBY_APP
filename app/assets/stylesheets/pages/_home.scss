@@ -3,3 +3,37 @@
 .h1 {
 color: #7BB602;
 }
+
+.green-button {
+  background-color: $new-green;
+  color: black;
+  border-color: $sexy-pink;
+  transition: background-color .3s, color .3s, border-color .3s;
+
+}
+
+.green-button:hover {
+  color: #f478cf;
+  border-color: $new-green;
+  transition: 0.3s;
+}
+.event-time-date {
+  box-shadow: 0 4px 8px 0 $new-green;
+  box-shadow: 0 8px 4px 0 
+}
+
+.event-description {
+  text-shadow: 1px 1px 1px $sexy-pink;
+  font-weight: bold;
+}
+
+.venues-title {
+  color: $sexy-pink;
+}
+
+.pink-button {
+  background-color: $sexy-pink;
+  color: black;
+
+
+}
