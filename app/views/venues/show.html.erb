@@ -42,7 +42,7 @@
               </div>
               <div class="carousel-inner rounded-4">
                 <div class="carousel-item active">
-                 <%= cl_image_tag @venue.photos.first.key, class: "d-block w-100", alt:"Venue image" %>
+                 <img src="<%= @events.first.image %>" class="d-block w-100" alt="Venue image">
                   <div class="carousel-caption d-md-block">
                     <h5><%= @venue.name %></h5>
 
