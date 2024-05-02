@@ -4,11 +4,11 @@
       <h1 style="text-align: center;"><strong>Checkout</strong></h1>
     </div>
 
-    <div class="event-time-date d-flex align-items-center mt-4 p-3 bg-body-secondary justify-content-between text-center card-shadow">
+    <div class="event-time-date d-flex align-items-center mt-4 p-3 bg-body-secondary justify-content-between text-center card-shadow checkout-card">
       <div class="fw-bold col-12 sexy-pink-color">
         <h4 class="card-title"><strong><%= @event.name %></strong></h4>
         <p class="card-text">
-          <%= link_to "<i class='fa-solid fa-masks-theater'></i> #{@event.venue.name}".html_safe, venue_path(@event.venue), class: "btn btn-primary smaller-button rounded-pill shadow" %>
+          <%= link_to "<i class='fa-solid fa-masks-theater'></i> #{@event.venue.name}".html_safe, venue_path(@event.venue), class: "btn btn-info shadow smaller-button rounded-pill mt-3" %>
         </p>
         <p class="card-text"><i class="fas fa-map-marker-alt"></i> <%= @event.venue.location %></p> <!-- we can change laither that to a link to map card -->
         <p class="mb-0"><i class="fa fa-calendar"></i> <%= @event.date.strftime("%A, %d %B %Y") %> </p>
@@ -16,21 +16,21 @@
       </div>
     </div>
 
-    <div class="d-flex align-items-center justify-content-center col-12 mt-4 p-3 bg-body-secondary card shadow">
+    <div class="d-flex align-items-center justify-content-center col-12 mt-4 p-3 bg-body-secondary card shadow checkout-card">
       <div class="fw-bold row justify-content-center sexy-pink-color">
         <% if @event.discounts.last.try(:new_price).nil? %>
           <p class="mb-0 col-6 text-center">REGULAR PRICE</p> <p class="mb-0 col-6 text-end"><%= @event.price %><i class="fa-solid fa-euro-sign"></i></p>
         <% else %>
-          <p class="mb-0 col-6 text-center booking-text">REGULAR PRICE</p> <p class="mb-0 col-6 text-end booking-text"><%= @event.price %><i class="fa-solid fa-euro-sign"></i></p>
-          <p class="mb-0 col-6 text-center booking-text">LAST-MINUTE SAVINGS</p> <p class="mb-0 col-6 text-end booking-text"><%= @event.discounts.last.try(:new_price) %><i class="fa-solid fa-euro-sign"></i></p>
-          <p class="mb-0 col-6 text-center booking-text">FINAL PRICE</p> <p class="mb-0 col-6 text-end booking-text"><%= @booking.paid_price %><i class="fa-solid fa-euro-sign"></i></p>
+          <p class="mb-0 col-8 text-center booking-text">REGULAR PRICE</p> <p class="mb-0 col-4 text-end booking-text"><%= @event.price %><i class="fa-solid fa-euro-sign"></i></p>
+          <p class="mb-0 col-8 text-center booking-text">LAST-MINUTE SAVINGS</p> <p class="mb-0 col-4 text-end booking-text"><%= @event.discounts.last.try(:new_price) %><i class="fa-solid fa-euro-sign"></i></p>
+          <p class="mb-0 col-8 text-center booking-text">FINAL PRICE</p> <p class="mb-0 col-4 text-end booking-text"><%= @booking.paid_price %><i class="fa-solid fa-euro-sign"></i></p>
         <% end %>
       </div>
     </div>
 
     <div class="col-sm-12 mt-4 text-center">
       <%= simple_form_for [@event, @booking] do |f| %>
-        <%= button_tag(type: 'submit', class: "btn btn-success shadow smaller-button rounded-pill") do %>
+        <%= button_tag(type: 'submit', class: "btn btn-dark rounded-pill pink-button mt-1") do %>
           <i class="fas fa-check"></i> Create Booking
         <% end %>
       <% end %>
