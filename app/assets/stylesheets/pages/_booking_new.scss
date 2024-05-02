@@ -5,6 +5,18 @@
 // font color//
 
 .sexy-pink-color {
-
   color: $sexy-pink;
+}
+
+.checkout-card {
+  max-width: 80vw;
+  padding: 2vh 1vw;
+  margin: 2vh auto;
+  box-shadow: -1px 8px 3px  rgba(122, 182, 2, 0.8) !important ;
+  background:
+  linear-gradient(30deg, rgba(122, 182, 2, 0.3) 0%, rgba(122, 182, 2, 0.3) 20%, white 20%, white 100%),
+  linear-gradient(60deg, white 0%, white 80%, rgba(122, 182, 2, 0.3) 80%, rgba(122, 182, 2, 0.3) 100%),
+  linear-gradient(120deg, rgba(122, 182, 2, 0.3) 0%, rgba(122, 182, 2, 0.3) 20%, white 20%, white 100%),
+  linear-gradient(150deg, white 0%, white 80%, rgba(122, 182, 2, 0.3) 80%, rgba(122, 182, 2, 0.3) 100%);
+  background-blend-mode: color;
 }
