@@ -28,7 +28,11 @@
 
         <div class="banner-txt">
           <h1 class="fw-bold text-white mb-3"> <%= @event.name %> </h1>
-          <%= link_to "buy for #{ @event.price } €", new_event_booking_path(@event), class: "btn btn-dark rounded-pill pink-button" %>
+          <% if @event.discounts.any? %>
+            <%= link_to "buy for #{ @event.discounts.last.new_price } €", new_event_booking_path(@event), class: "btn btn-dark rounded-pill pink-button" %>
+          <% else  %>
+            <%= link_to "buy for #{ @event.price } €", new_event_booking_path(@event), class: "btn btn-dark rounded-pill pink-button" %>
+          <% end %>
         </div>
       </div>
     </div>

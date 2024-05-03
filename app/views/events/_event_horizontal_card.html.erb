@@ -24,7 +24,11 @@
         <p class="card-text">
 
           <div class="change">
-            <i class="fa fa-calendar"></i> <%= event.date.strftime("%d.%m.%Y") %> | <i class="fa fa-clock"></i> <%= event.time.strftime("%I:%M %p") %> | <i class="fa-solid fa-euro-sign"></i> <%= event.price %>
+            <% if event.discounts.any? %>
+              <i class="fa fa-calendar"></i> <%= event.date.strftime("%d.%m.%Y") %> | <i class="fa fa-clock"></i> <%= event.time.strftime("%I:%M %p") %> | <del><%= event.price %></del> - <%= event.discounts.last.new_price %> <i class="fa-solid fa-euro-sign"></i>
+            <% else  %>
+              <i class="fa fa-calendar"></i> <%= event.date.strftime("%d.%m.%Y") %> | <i class="fa fa-clock"></i> <%= event.time.strftime("%I:%M %p") %> | <i class="fa-solid fa-euro-sign"></i> <%= event.price %>
+          <% end %>
             <span style="float: right;"><%= link_to '<i class="fa fa-eye"></i> Show'.html_safe, event_path(event), class: 'btn btn-info shadow smaller-button rounded-pill' %></span>
           </div>
         </p>
